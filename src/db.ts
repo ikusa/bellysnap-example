@@ -6,7 +6,7 @@ const url = 'mongodb://localhost:27017';
 // Database Name
 const dbName = 'bellysnap';
 
-export async function connect() {
+async function connect() {
   const client = new MongoClient(url);
 
   try {
@@ -19,3 +19,4 @@ export async function connect() {
   }
   return client.db(dbName);
 }
+export const db = connect();
