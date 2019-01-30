@@ -1,0 +1,32 @@
+{
+  "name": "bellysnap-backend",
+  "version": "1.0.0",
+  "main": "main.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon"
+  },
+  "devDependencies": {
+    "prettier": "^1.15.3",
+    "prettier-tslint": "^0.4.1",
+    "tsconfig-kodefox": "^1.0.1",
+    "tslint": "^5.11.0",
+    "tslint-config-kodefox": "^1.1.1",
+    "tslint-config-prettier": "^1.17.0",
+    "tslint-plugin-prettier": "^2.0.1",
+    "tslint-react": "^3.6.0",
+    "typescript": "^3.2.2",
+    "@types/express": "^4.16.1"
+  },
+  "prettier": {
+    "bracketSpacing": false,
+    "singleQuote": true,
+    "trailingComma": "all",
+    "arrowParens": "always"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "nodemon": "^1.18.9",
+    "ts-node": "^8.0.2"
+  }
+}
