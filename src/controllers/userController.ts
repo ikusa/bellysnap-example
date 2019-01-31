@@ -1,11 +1,8 @@
 import {RequestHandler} from 'express';
-import {Db} from 'mongodb';
+import promiseUserModel from '../models/User';
 
-export const getUsers: RequestHandler = async (req, res) => {
-  const db: Db = req.app.locals.db;
-  let dbData = await db
-    .collection('Users')
-    .find()
-    .toArray();
+export const getUsers: RequestHandler = async (_, res) => {
+  let userModel = await promiseUserModel;
+  let dbData = await userModel.getUsers();
   res.json(dbData);
 };
