@@ -1,15 +1,17 @@
 import express from 'express';
-import {db} from './db';
-import routes from './route';
+import {getDB} from './db';
+import routes from './routes';
 
 const app = express();
 const port = 3000;
 
 let runServer = async () => {
-  app.locals.db = await db;
+  app.locals.db = await getDB();
   app.use('/api', routes);
-  // tslint:disable-next-line:no-console
-  app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+  app.listen(port, () =>
+    // tslint:disable-next-line:no-console
+    console.log(`Example app listening on port http://localhost:${port} !`),
+  );
 };
 
 runServer();
